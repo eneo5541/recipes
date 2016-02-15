@@ -293,7 +293,7 @@ var recipeLists =
 		 ]
 	},
 	{
-  		name: 'Baked Spaghettia',
+  		name: 'Baked Spaghetti',
   		category: 'vegetarian',
   		ingredients: [
   			'Pasta',
@@ -304,19 +304,6 @@ var recipeLists =
 		 ]
 	}
  ];
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var ractive = new Ractive({
 	el: 'container',
