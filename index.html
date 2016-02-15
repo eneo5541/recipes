@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Recipes</title>
+		<link rel="stylesheet" href="./foundation.css" />
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+	
+	<div id="container"></div>
+	<script id="template" type="text/ractive">
+
+		<div class="row">
+			<div class="small-4 columns">
+				<a href="#" class="button get-recipe" on-click="getRecipe"></a>
+			</div>
+			<div class="small-8 columns">
+				<select class="categories-list" value="{{selectedCategory}}">
+					{{#recipeCategories}}
+						<option value="{{id}}">{{name}}</option>
+					{{/countries}}
+				</select>
+			</div>
+		</div>
+
+		{{#with selectedRecipe}}
+
+			<div class="row">
+				<div class="small-12 columns">
+					<h1>{{name}}</h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 columns">
+					<hr />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 columns">
+					<ul class="ingredients-list">
+						{{#ingredients}}
+							<!--<li>
+								<input type="checkbox">
+								<label>{{.}}</label>
+							</li>-->
+							<label><input type="checkbox"/> {{.}}</label>
+						{{/ingredients}}
+					</ul>
+				</div>
+			</div>
+
+		{{/with}}
+
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
+	<script src="./index.js"></script>
+	</body>
+</html>
+
